@@ -93,7 +93,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   randomizeEggs() {
-    if (this.count != 10) {
+    if (this.count != 5) {
       setTimeout(() => {
         let randomItem = this.imgs[Math.floor(Math.random() * this.imgs.length)];
         const index = this.imgs.indexOf(randomItem);
@@ -126,7 +126,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.totalCount++;
         let item = document.getElementById("img-" + this.subcount[entity] + "-" + entity) as HTMLImageElement;
         item.src = "./assets/download_adobespark.png";
-        if ((this.totalCount % 10) == 0) {
+        if ((this.totalCount % 5) == 0) {
           this.level++;
           this.count = 0;
           this.imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
@@ -163,7 +163,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           this.endGame = true;
           this.endTheGame();
         }
-        if ((this.totalCount % 10) == 0) {
+        if ((this.totalCount % 5) == 0) {
           this.level++;
           this.count = 0;
           this.imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];

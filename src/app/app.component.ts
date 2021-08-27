@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
           basket.src = "./assets/download_adobespark.png";
           let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY + 1)) as HTMLImageElement;
-          updatedBasket.src = "./assets/basket.png";
+          updatedBasket.src = "./assets/new-basket.png";
           this.posY++;
         }
 
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
           basket.src = "./assets/download_adobespark.png";
           let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY - 1)) as HTMLImageElement;
-          updatedBasket.src = "./assets/basket.png";
+          updatedBasket.src = "./assets/new-basket.png";
           this.posY--;
         }
       }
@@ -190,7 +190,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
         basket.src = "./assets/download_adobespark.png";
         let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY + 1)) as HTMLImageElement;
-        updatedBasket.src = "./assets/basket.png";
+        updatedBasket.src = "./assets/new-basket.png";
         this.posY++;
       }
 
@@ -200,7 +200,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
         basket.src = "./assets/download_adobespark.png";
         let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY - 1)) as HTMLImageElement;
-        updatedBasket.src = "./assets/basket.png";
+        updatedBasket.src = "./assets/new-basket.png";
         this.posY--;
       }
     }

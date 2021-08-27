@@ -19,9 +19,9 @@ export class AppComponent implements OnInit, AfterViewInit {
       if (event.key == 'ArrowRight') {
         if (this.posY + 1 <= 10) {
           let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
-          basket.src = "../assets/download_adobespark.png";
+          basket.src = "./assets/download_adobespark.png";
           let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY + 1)) as HTMLImageElement;
-          updatedBasket.src = "../assets/basket.png";
+          updatedBasket.src = "./assets/basket.png";
           this.posY++;
         }
 
@@ -29,9 +29,9 @@ export class AppComponent implements OnInit, AfterViewInit {
       else if (event.key == 'ArrowLeft') {
         if (this.posY - 1 > 0) {
           let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
-          basket.src = "../assets/download_adobespark.png";
+          basket.src = "./assets/download_adobespark.png";
           let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY - 1)) as HTMLImageElement;
-          updatedBasket.src = "../assets/basket.png";
+          updatedBasket.src = "./assets/basket.png";
           this.posY--;
         }
       }
@@ -74,7 +74,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
     else {
       this.startGame = true;
-      this.audio = new Audio('../../../assets/Monkeys-Spinning-Monkeys.mp3');
+      this.audio = new Audio('./assets/Monkeys-Spinning-Monkeys.mp3');
       this.audio.addEventListener('ended', function () {
         this.currentTime = 0;
         this.play();
@@ -94,7 +94,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           this.imgs.splice(index, 1);
         }
         let item = document.getElementById("img-1-" + randomItem) as HTMLImageElement;
-        item.src = "../assets/egg.png";
+        item.src = "./assets/egg.png";
         this.increment(randomItem);
         this.count++;
         this.randomizeEggs();
@@ -106,9 +106,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (this.subcount[entity] != 17 && this.subcount[entity] != 19) {
       setTimeout(() => {
         let item = document.getElementById("img-" + this.subcount[entity] + "-" + entity) as HTMLImageElement;
-        item.src = "../assets/download_adobespark.png";
+        item.src = "./assets/download_adobespark.png";
         let updatedItem = document.getElementById("img-" + (this.subcount[entity] + 1) + "-" + entity) as HTMLImageElement;
-        updatedItem.src = "../assets/egg.png";
+        updatedItem.src = "./assets/egg.png";
         this.subcount[entity]++;
         this.increment(entity);
       }, (300 / this.level));
@@ -118,14 +118,14 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.score++;
         this.totalCount++;
         let item = document.getElementById("img-" + this.subcount[entity] + "-" + entity) as HTMLImageElement;
-        item.src = "../assets/download_adobespark.png";
+        item.src = "./assets/download_adobespark.png";
         if ((this.totalCount % 10) == 0) {
           this.level++;
           this.count = 0;
           this.imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
           this.imgs.forEach((item) => {
             let entity = document.getElementById("img-" + 20 + "-" + item) as HTMLImageElement;
-            entity.src = "../assets/download_adobespark.png";
+            entity.src = "./assets/download_adobespark.png";
           })
           this.subcount = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
           this.showLevel = true;
@@ -136,9 +136,9 @@ export class AppComponent implements OnInit, AfterViewInit {
       else {
         setTimeout(() => {
           let item = document.getElementById("img-" + this.subcount[entity] + "-" + entity) as HTMLImageElement;
-          item.src = "../assets/download_adobespark.png";
+          item.src = "./assets/download_adobespark.png";
           let updatedItem = document.getElementById("img-" + (this.subcount[entity] + 1) + "-" + entity) as HTMLImageElement;
-          updatedItem.src = "../assets/egg.png";
+          updatedItem.src = "./assets/egg.png";
           this.subcount[entity]++;
           this.increment(entity);
         }, (300 / this.level));
@@ -149,9 +149,9 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.totalCount++;
         this.lives.pop();
         let item = document.getElementById("img-" + this.subcount[entity] + "-" + entity) as HTMLImageElement;
-        item.src = "../assets/download_adobespark.png";
+        item.src = "./assets/download_adobespark.png";
         let item1 = document.getElementById("img-" + 20 + "-" + entity) as HTMLImageElement;
-        item1.src = "../assets/break_adobespark.png";
+        item1.src = "./assets/break_adobespark.png";
         if (this.lives.length == 0) {
           this.endGame = true;
           this.endTheGame();
@@ -162,7 +162,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           this.imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
           this.imgs.forEach((item) => {
             let entity = document.getElementById("img-" + 20 + "-" + item) as HTMLImageElement;
-            entity.src = "../assets/download_adobespark.png";
+            entity.src = "./assets/download_adobespark.png";
           })
           this.subcount = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
           this.showLevel = true;
@@ -181,9 +181,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (direction == 'right') {
       if (this.posY + 1 <= 10) {
         let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
-        basket.src = "../assets/download_adobespark.png";
+        basket.src = "./assets/download_adobespark.png";
         let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY + 1)) as HTMLImageElement;
-        updatedBasket.src = "../assets/basket.png";
+        updatedBasket.src = "./assets/basket.png";
         this.posY++;
       }
 
@@ -191,9 +191,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     else if (direction == 'left') {
       if (this.posY - 1 > 0) {
         let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
-        basket.src = "../assets/download_adobespark.png";
+        basket.src = "./assets/download_adobespark.png";
         let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY - 1)) as HTMLImageElement;
-        updatedBasket.src = "../assets/basket.png";
+        updatedBasket.src = "./assets/basket.png";
         this.posY--;
       }
     }

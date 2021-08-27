@@ -18,7 +18,7 @@
     <div class="elevate">
       <p class="ml-2 mb-0 font-weight-bold">Level {{level}}</p>
       <p class="ml-2 font-weight-bold">Lives <img *ngFor="let life of lives" style="width:30px"
-          src="../assets/red_heart_312695_adobespark.png"></p>
+          src="./assets/red_heart_312695_adobespark.png"></p>
     </div>
     <div class="elevate">
       <p class="mr-2 font-weight-bold">Score {{score}}</p>
@@ -27,10 +27,10 @@
   <div *ngIf="enableArrows" class="footer">
     <div class="d-flex adjust-footer">
       <div (click)="trigger('left')" style="height:20vh;width:10vw"> 
-        <img src="../assets/tr2_adobespark.png" width="100%" height="100%">
+        <img src="./assets/tr2_adobespark.png" width="100%" height="100%">
       </div>
       <div (click)="trigger('right')" style="height:20vh;width:10vw" class="rototor"> 
-        <img src="../assets/tr2_adobespark.png" width="100%" height="100%">
+        <img src="./assets/tr2_adobespark.png" width="100%" height="100%">
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
         <tr *ngFor="let height of verticalSquares; let rowIndex = index">
           <td *ngFor="let width of HorizontalSquares; let colIndex = index" id="box-{{ rowIndex+1 }}-{{ colIndex+1 }}"
             style="height:5vh;width:10vw" class="table-item"><img id="img-{{ rowIndex+1 }}-{{ colIndex+1 }}"
-              class="image" src="../assets/download_adobespark.png" alt="" height=100% width=25%></td>
+              class="image" src="./assets/download_adobespark.png" alt="" height=100% width=25%></td>
         </tr>
       </table>
     </div>
@@ -52,9 +52,9 @@
           <td *ngFor="let width of HorizontalSquares; let colIndex = index"
             id="basket-box-{{ rowIndex+1 }}-{{ colIndex+1 }}" style="height:20vh;width:10vw" class="table-item"><img
               *ngIf="colIndex !=4" id="basket-img-1-{{ colIndex+1 }}" class="image"
-              src="../assets/download_adobespark.png" alt="" height=100% width=100%>
+              src="./assets/download_adobespark.png" alt="" height=100% width=100%>
             <img *ngIf="colIndex ==4" id="basket-img-1-{{ colIndex+1 }}" class="image"
-              src="../assets/basket.png" alt="" height=100% width=100%>
+              src="./assets/basket.png" alt="" height=100% width=100%>
           </td>
         </tr>
       </table>

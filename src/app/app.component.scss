@@ -1,0 +1,156 @@
+@keyframes shift {
+    from {
+        background-color: yellow;
+    }
+    to {
+        background-color: orange;
+    }
+}
+body,
+html {
+    font-family: arial, sans-serif;
+}
+.modal {
+    table {
+        width: 100%;
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    }
+}
+.game-in-wrapper {
+    form {
+        margin-top: 50vh;
+    }
+    input {
+        border-radius: 5px;
+        background-color: #ffae42;
+    }
+}
+.game-end-title {
+    margin-top: 40vh;
+    color: red;
+    font-weight: bold;
+    h1 {
+        font-size: 56px;
+    }
+    p {
+        color: black;
+        font-size: 25px;
+    }
+    .view {
+        button {
+            background-color: transparent;
+            border: unset;
+            text-decoration: underline;
+            color: black;
+        }
+    }
+}
+.btn-div {
+    button {
+        background-color: orangered;
+        color: white;
+        width: 100%;
+        height: 50px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    text-align: center;
+    margin-top: 15px;
+}
+.game-wrapper {
+    height: 100vh;
+    background: url("../assets/egg.webp") no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #ffae42;
+    animation-name: shift;
+    animation-duration: 10s;
+}
+
+.level-indicator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1050;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 50px;
+        color: red;
+    }
+}
+.end-game {
+    height: 100vh;
+    background: url("../assets/egg.webp") no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #ffae42;
+    animation-name: shift;
+    animation-duration: 10s;
+}
+
+.game-out-wrapper {
+    height: 100vh;
+    background: url("../assets/fbg.jpg") no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .header {
+        justify-content: space-between;
+        color: red;
+        font-size: 25px;
+    }
+    .footer {
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: 1000;
+        width: 100%;
+    }
+    .rototor {
+        -ms-transform: rotate(18deg); /* IE 9 */
+        transform: rotate(180deg);
+    }
+    .adjust-footer {
+        justify-content: space-between;
+    }
+    .elevate {
+        z-index: 100;
+    }
+    .game-board {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+    .game-basket {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+    }
+    .table-item {
+        text-align: center;
+        vertical-align: top;
+        // border: 1px solid black;
+    }
+}

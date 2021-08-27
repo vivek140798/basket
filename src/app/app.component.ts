@@ -65,6 +65,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.verticalSquares = Array(20).fill(null);
     if(window.innerWidth <= 768){
       this.enableArrows = true;
+      window.scrollTo(0,document.body.scrollHeight);
     }
   }
 

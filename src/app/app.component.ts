@@ -63,7 +63,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.HorizontalSquares = Array(10).fill(null);
     this.verticalSquares = Array(20).fill(null);
-    if(window.innerWidth <= 768){
+    if (window.innerWidth <= 768) {
       this.enableArrows = true;
     }
   }
@@ -73,7 +73,14 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.noName = true;
     }
     else {
-      window.scrollTo(0, 1);
+      const a = document.createElement('a');
+      a.href = '';
+      const clickHandler = () => {
+        const elem = document.documentElement;
+        if (elem.requestFullscreen) { elem.requestFullscreen() }
+      };
+      a.addEventListener('click', clickHandler, false);
+      a.click();
       this.startGame = true;
       this.audio = new Audio('./assets/Monkeys-Spinning-Monkeys.mp3');
       this.audio.addEventListener('ended', function () {
@@ -99,7 +106,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.increment(randomItem);
         this.count++;
         this.randomizeEggs();
-      }, this.count == 0?10:(5000 / this.level));
+      }, this.count == 0 ? 10 : (5000 / this.level));
     }
   }
 

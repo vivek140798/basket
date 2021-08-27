@@ -65,7 +65,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.verticalSquares = Array(20).fill(null);
     if(window.innerWidth <= 768){
       this.enableArrows = true;
-      window.scrollTo(0,document.body.scrollHeight);
     }
   }
 
@@ -74,6 +73,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.noName = true;
     }
     else {
+      window.scrollTo(0,document.body.scrollHeight);
       this.startGame = true;
       this.audio = new Audio('./assets/Monkeys-Spinning-Monkeys.mp3');
       this.audio.addEventListener('ended', function () {

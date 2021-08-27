@@ -73,8 +73,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.noName = true;
     }
     else {
-      const a = document.createElement('a');
-      a.href = '';
+      const a = document.createElement('p');
       const clickHandler = () => {
         const elem = document.documentElement;
         if (elem.requestFullscreen) { elem.requestFullscreen() }

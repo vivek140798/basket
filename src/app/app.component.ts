@@ -73,9 +73,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.noName = true;
     }
     else {
-      setTimeout(()=>{      
-        window.scrollTo(0,document.body.scrollHeight);
-      },5000);
+      window.scrollTo(0, 1);
       this.startGame = true;
       this.audio = new Audio('./assets/Monkeys-Spinning-Monkeys.mp3');
       this.audio.addEventListener('ended', function () {

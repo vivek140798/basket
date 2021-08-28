@@ -58,13 +58,30 @@ export class AppComponent implements OnInit, AfterViewInit {
   totalCount: number = 0;
   subcount: Array<number> = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   imgs: Array<any> = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  elem: any;
+
 
 
   ngOnInit() {
+    this.elem = document.documentElement;
     this.HorizontalSquares = Array(10).fill(null);
     this.verticalSquares = Array(20).fill(null);
     if (window.innerWidth <= 768) {
       this.enableArrows = true;
+    }
+  }
+  openFullscreen() {
+    if (this.elem.requestFullscreen) {
+      this.elem.requestFullscreen();
+    } else if (this.elem.mozRequestFullScreen) {
+      /* Firefox */
+      this.elem.mozRequestFullScreen();
+    } else if (this.elem.webkitRequestFullscreen) {
+      /* Chrome, Safari and Opera */
+      this.elem.webkitRequestFullscreen();
+    } else if (this.elem.msRequestFullscreen) {
+      /* IE/Edge */
+      this.elem.msRequestFullscreen();
     }
   }
 
@@ -75,8 +92,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     else {
       const a = document.createElement('p');
       const clickHandler = () => {
-        const elem = document.documentElement;
-        if (elem.requestFullscreen) { elem.requestFullscreen() }
+        this.openFullscreen();
       };
       a.addEventListener('click', clickHandler, false);
       a.click();

@@ -105,7 +105,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.increment(randomItem);
         this.count++;
         this.randomizeEggs();
-      }, this.count == 0 ? 10 : (5000 / this.level));
+      }, (this.count == 0 ? 2000 : (5000 / this.level)));
     }
   }
 

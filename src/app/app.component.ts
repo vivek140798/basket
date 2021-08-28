@@ -24,7 +24,13 @@ export class AppComponent implements OnInit, AfterViewInit {
           updatedBasket.src = "./assets/new-basket.png";
           this.posY++;
         }
-
+        else if (this.posY + 1 == 11) {
+          let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
+          basket.src = "./assets/download_adobespark.png";
+          let updatedBasket = document.getElementById("basket-img-1" + "-" + "1") as HTMLImageElement;
+          updatedBasket.src = "./assets/new-basket.png";
+          this.posY = 1;
+        }
       }
       else if (event.key == 'ArrowLeft') {
         if (this.posY - 1 > 0) {
@@ -33,6 +39,13 @@ export class AppComponent implements OnInit, AfterViewInit {
           let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY - 1)) as HTMLImageElement;
           updatedBasket.src = "./assets/new-basket.png";
           this.posY--;
+        }
+        else if (this.posY - 1 == 0) {
+          let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
+          basket.src = "./assets/download_adobespark.png";
+          let updatedBasket = document.getElementById("basket-img-1" + "-" + "10") as HTMLImageElement;
+          updatedBasket.src = "./assets/new-basket.png";
+          this.posY = 10;
         }
       }
     }
@@ -209,6 +222,13 @@ export class AppComponent implements OnInit, AfterViewInit {
         updatedBasket.src = "./assets/new-basket.png";
         this.posY++;
       }
+      else if (this.posY + 1 == 11) {
+        let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
+        basket.src = "./assets/download_adobespark.png";
+        let updatedBasket = document.getElementById("basket-img-1" + "-" + "1") as HTMLImageElement;
+        updatedBasket.src = "./assets/new-basket.png";
+        this.posY = 1;
+      }
 
     }
     else if (direction == 'left') {
@@ -218,6 +238,13 @@ export class AppComponent implements OnInit, AfterViewInit {
         let updatedBasket = document.getElementById("basket-img-1" + "-" + (this.posY - 1)) as HTMLImageElement;
         updatedBasket.src = "./assets/new-basket.png";
         this.posY--;
+      }
+      else if (this.posY - 1 == 0) {
+        let basket = document.getElementById("basket-img-1" + "-" + this.posY) as HTMLImageElement;
+        basket.src = "./assets/download_adobespark.png";
+        let updatedBasket = document.getElementById("basket-img-1" + "-" + "10") as HTMLImageElement;
+        updatedBasket.src = "./assets/new-basket.png";
+        this.posY = 10;
       }
     }
 
